@@ -22,7 +22,7 @@ public class AppSecurityConfiguration {
         http.csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .requestMatchers("")
+                .requestMatchers("/hitechschool/auth/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated()

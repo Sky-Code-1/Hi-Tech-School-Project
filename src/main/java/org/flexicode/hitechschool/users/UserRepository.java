@@ -1,4 +1,9 @@
 package org.flexicode.hitechschool.users;
 
-public class UserRepository {
+import org.springframework.data.repository.CrudRepository;
+
+import java.util.Optional;
+
+public interface UserRepository extends CrudRepository<Users, Long> {
+    public Optional<Users> findByUsername(String username);
 }
